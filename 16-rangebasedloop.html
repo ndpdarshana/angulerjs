@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Head first AngulerJS</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/16-controller.js"></script>
+  </head>
+  <body ng-app="mainApp">
+    <div ng-controller="app">
+      <ol>
+        <li ng-repeat="i in myRange">{{i}}</li>
+      </ol>
+
+      <ol>
+        <li ng-repeat="i in myRange track by $index">
+          {{$index}}
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>

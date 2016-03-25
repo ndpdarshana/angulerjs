@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Head first AngulerJS</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/23-controller.js"></script>
+  </head>
+  <body ng-app="mainApp" ng-controller="app">
+    <button ng-click="toggle()">Click</button>
+    <div id="message" ng-show="show == 'msg1'">This is the message 1</div>
+    <div id="message" ng-show="show == 'msg2'">This is the message 2</div>
+  </body>
+</html>

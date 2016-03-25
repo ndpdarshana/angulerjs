@@ -1,0 +1,29 @@
+{
+  "records" :[
+    {
+      "name":"Eranda",
+      "age":"25",
+      "color" : "Orange"
+    },
+    {
+      "name":"Nalin",
+      "age":"26",
+      "color" : "Black"
+    },
+    {
+      "name":"Prathibha",
+      "age":"25",
+      "color" : "Blue"
+    },
+    {
+      "name":"Ishan",
+      "age":"29",
+      "color" : "Blue"
+    },
+    {
+      "name":"Anonymous",
+      "age":"--",
+      "color" : "White"
+    }
+  ]
+}

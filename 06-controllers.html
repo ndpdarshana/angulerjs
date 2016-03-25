@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myLanguageApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Head first AngulerJS | Controllers</title>
+    <script src="js/angular.min.js"></script>
+  </head>
+  <body>
+    <div ng-controller="languages">
+      Select your favorite Language:  <button ng-click="java()">Java</button>
+                                      <button ng-click="cpp()">C++</button>
+                                      <button ng-click="javascript()">JavaScript</button>
+                                      <button ng-click="php()">PHP</button>
+      <p>You have selected: {{myFavLanguage}}</p>
+    </div>
+
+    <script>
+      var app = angular.module('myLanguageApp', []);
+      app.controller('languages', function($scope){
+        $scope.myFavLanguage = 'None';
+
+        $scope.java = function(){
+          $scope.myFavLanguage = 'Java'
+        }
+        $scope.cpp = function(){
+          $scope.myFavLanguage = 'c++'
+        }
+        $scope.javascript = function(){
+          $scope.myFavLanguage = 'javaScript'
+        }
+        $scope.php = function(){
+          $scope.myFavLanguage = 'php'
+        }
+      });
+    </script>
+  </body>
+</html>

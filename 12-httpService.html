@@ -1,0 +1,19 @@
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Head first AngulerJS</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/12-controller.js"></script>
+  </head>
+  <body ng-app="mainApp">
+    <div ng-controller="people">
+      <ul>
+        <h2>Name and age of dev team:</h2>
+        <li ng-repeat="person in persons">
+          {{person.name + " : " + person.Age}}
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+  <head>
+    <meta charset="utf-8">
+    <title>Head first AngulerJS | ng-repeat</title>
+    <script src="js/angular.min.js"></script>
+  </head>
+  <body>
+    <div ng-init="myFavLang=[{name:'java',extention:'.java'},{name:'javaScript',extention:'.js'},{name:'c',extention:'.c'}]"></div>
+    <p ng-repeat="lang in myFavLang">
+      Name: {{lang.name}}
+      Ext: {{lang.extention}}
+    </p>
+  </body>
+</html>

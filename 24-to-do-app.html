@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Head first AngulerJS</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/24-controller.js"></script>
+    <style>
+      span.done-true{
+        color:gray;
+        text-decoration: line-through;
+      }
+      span[contenteditable="true"]{
+        background: gray;
+        padding: 3px;
+      }
+    </style>
+  </head>
+  <body ng-app="mainApp" ng-controller="app">
+    <h1 style="text-align:center">Add a task</h1>
+    <input type="text" ng-model="task" ng-keyup="searchEnter()" style="display:block;margin:0 auto;padding:5px;font-size:15px;width:300px">
+    <ol>
+      <li ng-repeat="task in tasks track by $index">
+        <input type="checkbox" ng-model="task.status">
+        <span contenteditable="false" ng-model="task.taskMsg" ng-dblclick="contentEdit(task.taskMsg)" ng-keydown="enterAgain(task.taskMsg)" class="done-{{task.status}}">
+           {{task.taskMsg}}
+        </span>
+      </li>
+    </ol>
+  </body>
+</html>

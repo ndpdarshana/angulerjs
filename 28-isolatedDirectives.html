@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Head first AngulerJS</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/28-controller.js"></script>
+  </head>
+  <body ng-app="mainApp" ng-controller="app">
+    <p>Var name {{myname}}</p>
+    <p>Age {{age}}</p>
+    <input type="button" value="Click" ng-click="alertTheName()">
+    <p>----------------Directives-----------------</p>
+    <div my-directive myname="{{myname}}" age="age" func="alertTheName()"></div>
+  </body>
+</html>

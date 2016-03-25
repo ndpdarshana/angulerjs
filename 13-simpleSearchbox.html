@@ -1,0 +1,20 @@
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Head first AngulerJS</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/12-controller.js"></script>
+  </head>
+  <body ng-app="mainApp">
+    <input type="text" ng-model="searchbox">
+    <div ng-controller="people">
+      <ul>
+        <h2>Name and age of dev team:</h2>
+        <li ng-repeat="person in persons | filter:searchbox">
+          {{person.name + " : " + person.Age}}
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

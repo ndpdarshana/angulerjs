@@ -1,0 +1,26 @@
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Head first AngulerJS</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/14-controller.js"></script>
+  </head>
+  <body ng-app="mainApp">
+    <div ng-controller="people">
+      <ul>
+        <h2>Name and age of dev team:</h2>
+        <li ng-repeat="person in persons | filter:globalSearch">
+          {{person.name + " : " + person.age + " : " + person.color}}
+        </li>
+      </ul>
+    </div>
+
+    <div id="searchbox">
+      <input type="text" ng-model="globalSearch.$" placeholder="all">
+      <input type="text" ng-model="globalSearch.name" placeholder="name">
+      <input type="text" ng-model="globalSearch.age" placeholder="age">
+      <input type="text" ng-model="globalSearch.color" placeholder="color">
+    </div>
+  </body>
+</html>
